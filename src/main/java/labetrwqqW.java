@@ -4,7 +4,8 @@
  import java.util.Scanner;
 
 
-
+ import java.util.regex.Matcher;
+ import java.util.regex.Pattern;
 
 public class labetrwqqW {
 
@@ -14,15 +15,26 @@ public class labetrwqqW {
         test = "http://erdani.com/tdpl/hamlet.txt";
 
       String test2= urlToString(test);
-System.out.println(test2);
 
-        /**
-         * Retrieve contents from a URL and return them as a string.
-         *
-         * @param url url to retrieve contents from
-         * @return the contents from the url as a string, or an empty string on error
-         */
-}
+      String in = "i have a male cat. the color of male cat is Black";
+      int i = 0;
+      Pattern p = Pattern.compile("Hamlet");
+      Matcher m = p.matcher( test2 );
+      while (m.find()) {
+          i++;
+      }
+      System.out.println(i);
+
+
+
+
+
+
+    }
+
+
+
+
 
         public static String urlToString(final String url) {
             Scanner urlScanner;
